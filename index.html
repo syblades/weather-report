@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css" />
 </head>
-<body>
-    
-</body>
+    <body>
+    <header id="pageHeader">
+        <h1>Make Your Day</h1>
+        <h3>The Greatest Weather App in the Universe!</h3>
+            <span>
+                Showing the perfect climate for 
+                <span id="locationHeaderName" class="locationHeaderClass">
+            </span>
+            </span>
+    </header>
+        <article id="photoSection">
+            <img src="assets/winter.gif" alt="moving picture of a snowy winter evening">
+            <img src="assets/cloudy.gif" alt="moving picture of a snowy winter evening">
+            <img src="assets/sun.gif" alt="moving picture of a snowy winter evening">
+            <img src="assets/rain.gif" alt="moving picture of a snowy winter evening">
+        </article>
+
+    <article id="Article1">
+        <h2>Enter a Location below ⬇️ </h2> <br>
+        <input type ="text" id="locationNameInput" value="Seattle"></input>
+            <button id="locationNameReset" class ="LocationNameResetButton">Reset</button>
+    </article>
+
+    <article id="Article2">
+        <h2>Adjust the Temperature</h2>
+        <form>
+            <div class="val-button" id="decrease"
+                onclick="decreaseValue()" value="decreaseValue"> -
+            </div>
+                <input type='number' id='number' value="0"/>
+            <div class="val-button" id="increase" onclick="increaseValue()" value="increaseValue">+
+            </div>
+        </form>
+
+    </article>
+
+    <article id="Article3">
+        <h2>Choose a Sky</h2><br>
+        <select>
+            <option id="Sunny">Sunny</option>
+            <option id="Cloudy">Cloudy</option>
+            <option id="Rainy">Rainy</option>
+            <option id="Snowy">Snowy</option>
+        </select>
+    </article>
+    <script src="src/index.js"></script> 
+    </body>
 </html>
